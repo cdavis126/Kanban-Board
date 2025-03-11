@@ -37,10 +37,10 @@ class AuthService {
 
   // Stores token in localStorage & redirects to homepage
   login(idToken: string) {
-    console.log("Storing token:", idToken); // Debugging
     localStorage.setItem("id_token", idToken);
-    window.location.assign("/");
+    window.location.assign("/dashboard"); // Redirect to dashboard after login
   }
+  
 
   // Removes token & redirects to login page
   logout(navigate?: (path: string) => void) {

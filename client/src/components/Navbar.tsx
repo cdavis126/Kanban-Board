@@ -7,7 +7,7 @@ const Navbar = () => {
   const navigate = useNavigate(); //  Get navigate function
 
   const checkLogin = () => {
-    setLoginCheck(auth.loggedIn()); // Cleaner way to update login state
+    setLoginCheck(auth.loggedIn()); //  update login state
   };
 
   useEffect(() => {
