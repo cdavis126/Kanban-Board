@@ -1,20 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; //  Import useNavigate
 import auth from '../utils/auth';
 
 const Navbar = () => {
-  const [ loginCheck, setLoginCheck ] = useState(false);
+  const [loginCheck, setLoginCheck] = useState(false);
+  const navigate = useNavigate(); //  Get navigate function
 
   const checkLogin = () => {
-    if(auth.loggedIn()) {
-      setLoginCheck(true);
-    }
+    setLoginCheck(auth.loggedIn()); // Cleaner way to update login state
   };
 
   useEffect(() => {
-    console.log(loginCheck);
     checkLogin();
-  }, [loginCheck])
+  }, []); // Only runs once on component mount
 
   return (
     <div className='nav'>
@@ -22,8 +20,7 @@ const Navbar = () => {
         <Link to='/'>Krazy Kanban Board</Link>
       </div>
       <ul>
-      {
-        !loginCheck ? (
+        {!loginCheck ? (
           <li className='nav-item'>
             <button type='button'>
               <Link to='/login'>Login</Link>
@@ -31,15 +28,13 @@ const Navbar = () => {
           </li>
         ) : (
           <li className='nav-item'>
-            <button type='button' onClick={() => {
-              auth.logout();
-            }}>Logout</button>
+            <button type='button' onClick={() => auth.logout(navigate)}>Logout</button> {/* Pass navigate */}
           </li>
-        )
-      }
+        )}
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Navbar;
+
