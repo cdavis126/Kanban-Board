@@ -3,7 +3,8 @@
 A streamlined **Kanban board** with secure authentication, allowing users to manage work tasks efficiently. This project implements **JWT authentication** and a full-stack architecture with React and PostgreSQL.
 
 ## 🚀 Deployment  
-Live App: 🔗 [Visit Kanban-Board](#) *(Update this Render URL!)*  
+Live App: 🔗 [Visit Kanban-Board](https://kanban-board-25h8.onrender.com)  
+ 
 
 ## 📖 About the App  
 Kanban-Board is designed to help users securely log in and manage their tasks in an organized **Kanban-style workflow**.  

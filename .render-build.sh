@@ -4,9 +4,8 @@
 rm -rf node_modules package-lock.json
 npm install
 
-# Remove bcrypt and reinstall
-npm uninstall bcrypt
-npm install bcrypt
+# Fix bcrypt for Linux (Render environment)
+npm rebuild bcrypt --build-from-source
 
 # Run the build
 npm run build
