@@ -1,0 +1,62 @@
+# 📌 Kanban-Board  
+
+A streamlined **Kanban board** with secure authentication, allowing users to manage work tasks efficiently. This project implements **JWT authentication** and a full-stack architecture with React and PostgreSQL.
+
+## 🚀 Deployment  
+Live App: 🔗 [Visit Kanban-Board](#) *(Update this Render URL!)*  
+
+## 📖 About the App  
+Kanban-Board is designed to help users securely log in and manage their tasks in an organized **Kanban-style workflow**.  
+
+**Features:**  
+📌 **User Authentication** – Secure login with JSON Web Tokens (JWT).  
+📌 **Task Management** – Users can view, create, and edit tasks.  
+📌 **Drag & Drop** – Move tasks across columns (TODO, In Progress, Done).  
+📌 **Persistent Data** – Tasks and user info are stored in a PostgreSQL database.  
+📌 **Session Handling** – Tokens expire after inactivity to ensure security.  
+
+## 🎯 How It Works  
+
+1️⃣ **Login Page** – Users enter credentials to receive a JWT token.  
+2️⃣ **Kanban Board** – Tasks are displayed in draggable columns.  
+3️⃣ **Edit/Create Tasks** – Users can create, edit, and move tasks.  
+4️⃣ **Logout** – Removes JWT and redirects to login.  
+
+## 🛠️ Tech Stack  
+
+**Frontend:**  
+✔ React, TypeScript, Vite  
+✔ React Router for navigation  
+✔ Bootstrap for UI styling  
+
+**Backend:**  
+✔ Node.js, Express  
+✔ PostgreSQL with Sequelize ORM  
+✔ JSON Web Token (JWT) authentication  
+
+**Deployment:**  
+✔ Hosted on **Render**  
+✔ Database: **Render PostgreSQL**  
+
+## 📌 Environment Variables  
+
+Create a `.env` file in your **server** directory:  
+
+DB_URL=postgres://your_user:your_password@your_db_host:5432/kanban_db
+JWT_SECRET_KEY=your_random_secret_key
+
+## 🚀 Running Locally  
+
+Clone the repository:  
+git clone https://github.com/cdavis126/Kanban-Board.git
+cd Kanban-Board
+Install dependencies:
+-npm install
+Start the project with "npm start"
+
+Start the project:
+
+## 📄 License
+This project is open-source under the MIT License.
+
+## 💡 Built with TypeScript, React, and PostgreSQL. 🚀
