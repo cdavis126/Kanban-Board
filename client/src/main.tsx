@@ -16,9 +16,13 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
+        index: true, 
+        element: <Login /> // 
+      },
+      {
+        path: '/dashboard', //  Add dashboard explicitly
         element: <Board />
-      }, 
+      },
       {
         path: '/edit',
         element: <EditTicket />
@@ -33,7 +37,8 @@ const router = createBrowserRouter([
       }
     ]
   }
-])
+]);
+
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
